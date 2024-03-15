@@ -1,0 +1,14 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <dbz-list [characterList]="chatacters" (onDelete)="onDeleteCharacter($event)"></dbz-list> <!--[] EMITEN AL HIJO > TIene que haber un @Input() A donde se Emite-->
+
+  </div>
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character> <!--() ESCUCHA AL HIJO > Tiene que haber un  @Output()-->
+  </div>
+</div>
